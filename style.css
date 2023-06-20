@@ -1,0 +1,219 @@
+
+    body{
+        margin: 0 !important;   
+        color: white;
+        font-family: system-ui;
+    }
+
+    .container-main{
+        background: #4a128c;
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        font-weight: 600;
+        font-family: system-ui;
+        padding: 0.8em;
+        align-items: center;
+        position: fixed;
+    z-index: 1;
+    width: 100%;
+    }
+
+    .container-menu{
+        display: flex;
+        justify-content: center;
+        gap: 3em;
+    }
+
+    .item-menu{
+        cursor: pointer;
+    }
+
+    .item-menu:hover, .login:hover{
+        color: #f9b113;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .btn{
+        margin: 1em;
+        background: #fafafa;
+        border: 2px solid #4a128c;
+        color: #4a128c;
+        padding: 1em;
+        width: 30%;
+        border-radius: 20px;
+        font-weight: 600;
+        font-family: sans-serif;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .container-btn{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    .btn:hover{
+        background: #4a128c;
+        color: white;
+    }
+
+    .bem-vindo{
+        color: #f9b113;
+        font-size: 2em;
+        font-family: system-ui;
+        text-align: center;
+        margin: 1.5em 0 0;
+        font-weight: 900;
+    }
+
+    .texto-bem-vindo{
+        width: 55%;
+    text-align: center;
+    font-family: system-ui;
+    color: #49118a;
+    font-weight: 600;
+    margin: 2em 0;
+    }
+
+    .container-bem-vindo{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .login{
+        margin: 0 1em;
+    border-left: 2px solid white;
+    padding: 0 2em;
+    border-right: 2px solid white;
+    font-weight: 700;
+    cursor: pointer;
+    }
+
+    .footer{
+        background: #4a128c;
+    padding: 3em 10em 5em;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11em;
+    align-items: center;
+    }
+
+    .termos{
+        display: flex;
+    gap: 2em;
+    font-size: .8em;
+    }
+
+    .termoshover{
+        cursor: pointer;
+    }
+
+    .termoshover:hover{
+        color: #f9b113;
+    }
+
+    .item-blog{
+    width: 18%;
+    border-radius: 10px;
+    }
+
+    .container-main-blog{
+        display: flex;
+    gap: 10em;
+    justify-content: center;
+    padding: 3em 0;
+    }
+
+    .text-title{
+        font-size: 1.3em;
+    }
+
+    .text-texto{
+        font-size: .8em;
+    margin-top: 1em;
+    }
+
+    .item-blog:hover{
+        scale: 1.1;
+        transition: .75s;
+        cursor: pointer;
+    }
+
+    .baixe-app{
+        margin-top: 1.5em;
+    margin-bottom: 1em;
+    color: #f9b113;
+    font-weight: 700;
+    }
+
+    .item-dashboard{
+        color: #4a128c;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .dashboar{
+        display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-top: 8em;
+    }
+
+    .img-blog{
+        height: 15em;
+    }
+
+    .botao-flutuante {
+        position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4a128c;
+    border: none;
+    color: #fff;
+    padding: 20px 25px;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #ffffff;
+      }
+
+      .chat {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        color: black;
+        border: none;
+        width: 300px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 1px 1px 5px #ffffff;
+        border-radius: 10px ;
+      }
+
+      .displayNone{
+        display: none;
+      }
+
+    @media(min-width: 767px) and (max-height: 769px) {
+        .img-blog{
+            height: 13em;
+        }
+
+        .qr-code{
+            width: 40%;
+            height: 12em !important;
+        }
+
+    }

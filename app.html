@@ -1,0 +1,341 @@
+<html>
+    <head>
+        <title> Petbuddy | adoção de animais </title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <link rel="icon" type="image/png" href="icon.png"/>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+<style>
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .container-main-download{
+        color: #000;
+    display: flex;
+    justify-content: space-evenly;
+    margin: -10em 5em 5em;
+    }
+
+    .baixeapp{
+        font-size: 3em;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #4a128c;
+    }
+
+    .nossoaplicativo{
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 0.25em;
+    color: #4a128c;
+    }
+
+    .downloadgoogle{
+        background: #000;
+    color: white;
+    font-weight: 500;
+    margin-top: 3em;
+    width: 30%;
+    border-radius: 4px;
+    padding: 0.75em 2em;
+    font-size: .8em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    cursor: pointer;
+    }
+
+    .container-google{
+        display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 3em;
+    margin-top: 4em;
+    }
+
+    .downloadgoogle:hover{
+        scale: 1.1;
+        cursor: pointer;
+        transition: .75s;
+    }
+
+    .topo{
+        display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    }
+
+    .qr-code{
+        width: 40%;
+            height: 16em;
+    }
+
+</style>
+
+<div style="    display: flex;
+position: fixed;
+z-index: 1;
+width: 100%;
+top: 0;">
+    <div style="width: 100%;
+    background: #4a128c;
+    height: 5.5em;" onclick="voltar()">
+        <div class="logo" style="height: 100%;font-weight: 500;margin: 0 2em;"> <img src="img1.png" style="height: 3em;margin: 0 2em;"> Baixe nosso aplicativo PetBuddy</div> 
+           
+    </div>
+    <img src="img17.png" alt="" style="cursor: pointer;
+    position: absolute;
+    height: 15em;
+    right: 0;" >
+</div>
+
+<div class="container-main-download" style="margin: 5em 5em 5em;"> 
+    <img src="img16.png" alt="" style="width: 19%;    padding-top: 4em;">
+    <div style="width: 55%;padding-top: 1em;text-align: center;    padding-top: 4em;display: flex;
+    flex-direction: column;
+    justify-content: inherit; ">
+        <div style="width: 80%;">
+            <div class="baixeapp"> Faça o Download</div>
+            <div class="nossoaplicativo"> do nosso aplicativo.</div>
+        </div>
+
+        <div style="display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+        align-items: center;">
+            <div class="qr-code">
+                <img src="img7.png" class="qrcode" alt="" style="height: 100%;    margin-bottom: 1em;"> 
+                <div style="font-size: .9em;
+                color: #4a128c;
+                font-weight: 500;">Escaneie o QRCode para fazer o Download.</div>
+            </div>
+            <div class="container-google">
+                <div class="downloadgoogle" style="padding: 1em 2em;" onclick="abrePlayStore()"> 
+                    <div> <img src="img8.png" style="width: 30px;" alt=""></div>
+                    <div>
+                        <div> Fazer Download em </div>
+                        <div> Play Store </div>
+                    </div>
+                </div>
+                <div class="downloadgoogle" onclick="abreAppStore()"> 
+                    <div> <img src="img9.png" style="width: 40px;" alt=""></div>
+                    <div>
+                        <div> Fazer Download em </div>
+                        <div> App Store </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="dashboar" id="dashboard" style="background: #f1f1f1;
+padding: 6em 0;">
+    <div class="item-dashboard">
+        <img src="imgAdocao.png" alt="" style="    height: 5em;">
+        <div style="font-size: 3em;margin-top: .25em;"> + <span id="contador1"> 0 </span>  adoções</div>
+        <div style="font-size: 1.2em;    text-align: center;"> Ajudando milhares de pets por todo o Brasil. </div>
+    </div>
+    <div class="item-dashboard">
+        <img src="imgDoacao.png" alt="" style="    height: 5em;">
+        <div style="font-size: 3em;margin-top: .25em;"> + <span id="contador2"> 0 </span> doações</div>
+        <div style="font-size: 1.2em;    text-align: center;">Trazendo alegria e felicidade para os pets. </div>
+    </div>
+    <div class="item-dashboard">
+        <img src="imgUser.png" alt="" style="    height: 5em;">
+        <div style="font-size: 3em;margin-top: .25em;"> + <span id="contador3"> 0 </span> usuários </div>
+        <div style="font-size: 1.2em;    text-align: center;"> Pets que encontraram uma vida nova. </div>
+    </div>
+</div>
+
+
+<div class="footer" style="padding: 3em 10em;width: 95%;margin-top: 0;">
+    <div style="    display: flex; flex-direction: column;justify-content: center;width: 50%;">
+        <div class="logo" style="font-weight: 600;"> 
+            <img src="img1.png" style="height: 3em;margin: 0 1em 0 0;">
+            PetBuddy adoção de animais &nbsp; | &nbsp; Adote não compre
+            </div>
+            <div style="font-size: .8em;margin-top: 1em;">Petbuddy é uma marca registrada, recusa imitações.</div>
+    </div>
+    <div style="width: 50%;display: flex;flex-direction: column;align-items: center;">
+        <p> © 2023 Petbuddy adoção de animais &nbsp; | &nbsp; Todos os direitos reservados. </p>
+        <div class="termos">
+            <div class="termoshover"> Termos e Condições de Uso</div>
+            <div class="termoshover"> Dúvidas </div>
+            <div class="termoshover"> Privacidade</div>
+            <div class="termoshover"> Dicas de Segurança</div>
+        </div>
+    </div>
+</div>
+
+<button class="botao-flutuante" onclick="abreChat()">
+    <svg style="width: 25px;
+    height: 30px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0,0,256,256"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,4.07031c-12.63281,0 -22.92969,8.85156 -22.92969,19.92969c0,6.42969 3.52344,12.02734 8.93359,15.6875c-0.00781,0.21484 0.00781,0.5625 -0.27344,1.60938c-0.35156,1.29297 -1.05859,3.11719 -2.49219,5.17188l-1.01953,1.46094h1.78125c6.17188,0 9.74219,-4.02344 10.29688,-4.66797c1.83594,0.42969 3.72656,0.66797 5.70313,0.66797c12.63281,0 22.92969,-8.85156 22.92969,-19.92969c0,-11.07812 -10.29687,-19.92969 -22.92969,-19.92969zM25,5.92969c11.76953,0 21.07031,8.14844 21.07031,18.07031c0,9.92188 -9.30078,18.07031 -21.07031,18.07031c-2.03906,0 -3.96094,-0.19531 -5.76562,-0.66797l-0.57812,-0.15234l-0.37891,0.46484c0,0 -2.88672,3.25781 -7.49609,4.04297c0.83594,-1.50781 1.45313,-2.91406 1.73828,-3.97656c0.40234,-1.48047 0.41016,-2.48047 0.41016,-2.48047v-0.51172l-0.42969,-0.27344c-5.28125,-3.35937 -8.57031,-8.55859 -8.57031,-14.51562c0,-9.92187 9.30078,-18.07031 21.07031,-18.07031zM15,22c-1.10547,0 -2,0.89453 -2,2c0,1.10547 0.89453,2 2,2c1.10547,0 2,-0.89453 2,-2c0,-1.10547 -0.89453,-2 -2,-2zM25,22c-1.10547,0 -2,0.89453 -2,2c0,1.10547 0.89453,2 2,2c1.10547,0 2,-0.89453 2,-2c0,-1.10547 -0.89453,-2 -2,-2zM35,22c-1.10547,0 -2,0.89453 -2,2c0,1.10547 0.89453,2 2,2c1.10547,0 2,-0.89453 2,-2c0,-1.10547 -0.89453,-2 -2,-2z"></path></g></g></svg>
+</button>
+
+<div class="chat displayNone">
+    <div style="padding: 1em;
+    background: #4a128c;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px 10px 0 0;display: flex;
+    justify-content: space-between;    align-items: center;">
+        <div>  Novo Chat </div>
+        <div style="color: #4a128c;
+        background: white;
+        border-radius: 50%;
+        padding: 0.25em 0.65em;" onclick="fechaChat()"> X </div>
+    </div>
+    <div style="height: 365px;
+    background: #f1f1f1;"> 
+        <div style="    padding: 1em;
+        display: flex;
+        gap: 1em;
+        align-items: center;">
+            <div style="    background: #4a128c;
+            border-radius: 50%;
+            padding: 0.5em 0.6em;
+            color: white;"> BB </div>
+            <div style="background: white;
+            border-radius: 0px 10px 10px 20px;
+            margin-top: 1em;
+            padding: 0.75em 1em;
+            font-size: .8em;width: 60%;"> 
+                <div style="font-size: .85em;
+                font-weight: 600;
+                margin-bottom: 0.5em;"> BuddyBot </div>
+                <div style="    font-size: .9em;
+                color: #565656;"> Olá em que posso ajudar...</div>
+            </div>
+        </div>
+    </div>
+    <div style="color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #f1f1f1;
+    align-items: center;
+    gap: 1em;
+    border-radius: 0 0 10px 10px;">
+        <div style="border: 1px solid #4a128c;
+        border-radius: 4px;
+        padding: 0.75em;
+        font-size: .8em;
+        color: #4a128c;
+        width: 77%;"> Digite aqui... </div>
+        <div style="background: #4a128c;
+        border-radius: 50%;
+        padding: 0.65em .75em;font-size: .9em;"> Ok </div>     
+    </div>
+</div>
+
+</html>
+
+<script>
+
+var contador = 0;
+
+window.addEventListener('scroll', function() {
+var dashboard = document.getElementById('dashboard');
+var dashboardPosition = dashboard.getBoundingClientRect().top;
+var windowHeight = window.innerHeight;
+
+if (dashboardPosition < windowHeight && contador === 0) {
+    // função a ser executada quando a div com id='dashboard' estiver visível na janela do navegador
+    executaContador();
+    contador++;
+}
+});
+
+function executaContador(){
+    // Obtenha a referência ao elemento do contador
+    const counterElement = document.getElementById("contador1");
+
+    let count = 0;
+
+    const targetCount = 10000;
+    const duration = 50;
+    const increment = targetCount /  500;
+
+    const interval = setInterval(() => {
+        count += increment;
+        if (count >= targetCount) {
+            clearInterval(interval);
+            count = targetCount;
+        }
+        counterElement.innerHTML = count;
+    }, 10);
+
+
+
+    // Obtenha a referência ao elemento do contador
+    const counterElement2 = document.getElementById("contador2");
+
+    let count2 = 0;
+
+    const targetCount2 = 50000;
+    const duration2 = 10;
+    const increment2 = targetCount2 /  500;
+
+    const interval2 = setInterval(() => {
+        count2 += increment2;
+        if (count2 >= targetCount2) {
+            clearInterval(interval2);
+            count2 = targetCount2;
+        }
+        counterElement2.innerHTML = count2;
+    }, 10);
+
+
+    // Obtenha a referência ao elemento do contador
+    const counterElement3 = document.getElementById("contador3");
+
+    let count3 = 0;
+
+    const targetCount3 = 5000;
+    const duration3 = 10;
+    const increment3 = targetCount3 /  500;
+
+    const interval3 = setInterval(() => {
+        count3 += increment3;
+        if (count3 >= targetCount3) {
+            clearInterval(interval3);
+            count3 = targetCount3;
+        }
+        counterElement3.innerHTML = count3;
+    }, 10);
+}
+
+    function voltar(){
+        window.location.href = "./index.html"
+    }
+
+    function fechaChat(){
+        document.getElementsByClassName("chat")[0].classList.add("displayNone");
+        document.getElementsByClassName("botao-flutuante")[0].classList.remove("displayNone");
+    }
+
+    function abreChat(){
+        document.getElementsByClassName("chat")[0].classList.remove("displayNone");
+        document.getElementsByClassName("botao-flutuante")[0].classList.add("displayNone");
+    }
+
+    function abrePlayStore(){
+        window.open("https://play.google.com/store/search?q=petbuddy&c=apps&hl=pt_BR&gl=US");
+    }
+
+    function abreAppStore(){
+        window.open("https://www.apple.com/br/search/petbuddy?src=globalnav");
+    }
+</script>

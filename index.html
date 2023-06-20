@@ -1,0 +1,269 @@
+<html>
+    <head>
+        <title> Petbuddy | adoção de animais </title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <link rel="icon" type="image/png" href="icon.png"/>
+    </head>
+
+<link rel="stylesheet" href="style.css">
+
+<div class="container-main">
+    <div class="logo"> <img src="img1.png" style="height: 3em;margin: 0 2em;"> Bem-Vindo ao PetBuddy</div>
+    <div class="container-menu">
+        <div class="item-menu" onclick="abreApp()"> Faça uma doação </div>
+        <div class="item-menu" onclick="abreApp()"> Adote </div>
+        <div class="item-menu" onclick="abreApp()"> Apadrinhe </div>
+        <div class="item-menu" onclick="abreApp()"> Colabore </div>
+        <div class="item-menu" onclick="abreApp()" style=" margin-right: 3em;"> Baixe o APP </div>
+    </div>
+</div>
+
+<img src="img19.png" style="width: 100%;margin-top: 3em;">
+
+<div class="container-bem-vindo">
+    <p class="bem-vindo">Bem-vindo(a) ao nosso site de adoção online</p>
+    <p class="texto-bem-vindo"> 
+        Petbuddy é uma plataforma onde é possível encontrar pequenos amigos à espera de um novo lar. Graças a ele, podemos visualizar informações sobre os pets, tais como idade, raça, personalidade, entre outros e também entrar em contato com os tutores ou as organizações responsáveis pela adoção. Adotar um animal é uma atitude de amor e responsabilidade incalculável.
+    </p>
+    
+</div>
+
+<div style="width: 100%; display: flex; justify-content: center;">
+    <div class="container-btn">
+        <div class="btn" onclick="abreApp()"> Quero adotar um animal </div>
+        <div class="btn" onclick="abreApp()"> Quero ajudar com uma doação </div>
+    </div>
+</div>
+
+<div style="margin-top: 5em;">
+    <div style="    background: #f1f1f1;">
+        <p class="bem-vindo" style="padding-top: 1.5em;">Conheça nosso blog Petbuddy</p>
+        <div style="text-align: center;width: 100%;display: flex;justify-content: center;">
+            <p class="texto-bem-vindo" style="margin: 1em 0;"> 
+                Veja as novidades chegando na plataforma, saiba mais sobre as oportunidades criadas para facilitar a conexão entre o pet e o futuro dono.
+            </p>
+        </div>
+        <div class="container-main-blog"> 
+            <div class="item-blog" onclick="abreApp()"> 
+                <img src="img14.png" alt="" class="img-blog" style="width: 100%; border-radius: 8px 8px 0 0;">
+                <div style="    background: #4a128c;padding: 1em 1em 0.5em;border-radius: 0 0 10px 10px;">
+                    <div class="text-title"> Encontre</div>
+                    <div class="text-texto"> Encontre tutores e ONGs com pets disponíveis para adoção, eles amarão ter um novo lar. </div>
+                    <hr style="margin-top: 2em;">
+                    <div class="baixe-app" > Conheça nosso aplicativo  → </div>
+                </div>
+            </div>
+            <div class="item-blog" onclick="abreApp()"> 
+                <img src="img15.png" alt="" class="img-blog" style="width: 100%; border-radius: 8px 8px 0 0;">
+                <div style="    background: #4a128c;padding: 1em 1em 0.5em;border-radius: 0 0 10px 10px;">
+                    <div class="text-title"> Colabore</div>
+                    <div class="text-texto"> Colabore com instuições e faça uma doação para uma ONG, uma ajuda sempre será bem vinda. </div>
+                    <hr style="margin-top: 2em;">
+                    <div class="baixe-app"> Conheça nosso aplicativo →</div>
+                </div>
+            </div>
+            <div class="item-blog" onclick="abreApp()"> 
+                <img src="img18.png" alt="" class="img-blog" style="width: 100%; border-radius: 8px 8px 0 0;">
+                <div style="    background: #4a128c;padding: 1em 1em 0.5em;border-radius: 0 0 10px 10px;">
+                    <div class="text-title"> Praticidade</div>
+                    <div class="text-texto"> Conecte-se com outros usuários e compartilhe interesses sobre pets em comum. </div>
+                    <hr style="margin-top: 2em;">
+                    <div class="baixe-app"> Conheça nosso aplicativo →</div>
+                </div>
+            </div>
+        </div>
+        <div class="container-btn" style="padding-bottom: 3em;">
+            <div class="btn" onclick="abreApp()"> Baixe nosso app </div>
+        </div>
+     </div>
+</div>
+
+<div class="dashboar" id="dashboard">
+    <div class="item-dashboard">
+        <img src="imgAdocao.png" alt="" style="    height: 5em;">
+        <div style="font-size: 3em;margin-top: .25em;"> + <span id="contador1"> 0 </span>  adoções</div>
+        <div style="font-size: 1.2em;    text-align: center;"> Ajudando milhares de pets por todo o Brasil. </div>
+    </div>
+    <div class="item-dashboard">
+        <img src="imgDoacao.png" alt="" style="    height: 5em;">
+        <div style="font-size: 3em;margin-top: .25em;"> + <span id="contador2"> 0 </span> doações</div>
+        <div style="font-size: 1.2em;    text-align: center;">Trazendo alegria e felicidade para os pets. </div>
+    </div>
+    <div class="item-dashboard">
+        <img src="imgUser.png" alt="" style="    height: 5em;">
+        <div style="font-size: 3em;margin-top: .25em;"> + <span id="contador3"> 0 </span> usuários </div>
+        <div style="font-size: 1.2em;    text-align: center;"> Pets que encontraram uma vida nova. </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div style="display: flex;flex-direction: column;justify-content: center;">
+        <div class="logo" style="font-weight: 600;"> 
+            <img src="img1.png" style="height: 3em;margin: 0 1em 0 0;">
+            PetBuddy adoção de animais &nbsp; | &nbsp; Adote não compre
+            </div>
+            <div style="font-size: .8em;margin-top: 1em;">Petbuddy é uma marca registrada, recusa imitações.</div>
+    </div>
+    <div>
+        <p> © 2023 Petbuddy adoção de animais &nbsp; | &nbsp; Todos os direitos reservados. </p>
+        <div class="termos">
+            <div class="termoshover"> Termos e Condições de Uso</div>
+            <div class="termoshover"> Dúvidas </div>
+            <div class="termoshover"> Privacidade</div>
+            <div class="termoshover"> Dicas de Segurança</div>
+        </div>
+    </div>
+</div>
+
+<button class="botao-flutuante" onclick="abreChat()">
+    <svg style="width: 25px;
+    height: 30px;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0,0,256,256"><g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,4.07031c-12.63281,0 -22.92969,8.85156 -22.92969,19.92969c0,6.42969 3.52344,12.02734 8.93359,15.6875c-0.00781,0.21484 0.00781,0.5625 -0.27344,1.60938c-0.35156,1.29297 -1.05859,3.11719 -2.49219,5.17188l-1.01953,1.46094h1.78125c6.17188,0 9.74219,-4.02344 10.29688,-4.66797c1.83594,0.42969 3.72656,0.66797 5.70313,0.66797c12.63281,0 22.92969,-8.85156 22.92969,-19.92969c0,-11.07812 -10.29687,-19.92969 -22.92969,-19.92969zM25,5.92969c11.76953,0 21.07031,8.14844 21.07031,18.07031c0,9.92188 -9.30078,18.07031 -21.07031,18.07031c-2.03906,0 -3.96094,-0.19531 -5.76562,-0.66797l-0.57812,-0.15234l-0.37891,0.46484c0,0 -2.88672,3.25781 -7.49609,4.04297c0.83594,-1.50781 1.45313,-2.91406 1.73828,-3.97656c0.40234,-1.48047 0.41016,-2.48047 0.41016,-2.48047v-0.51172l-0.42969,-0.27344c-5.28125,-3.35937 -8.57031,-8.55859 -8.57031,-14.51562c0,-9.92187 9.30078,-18.07031 21.07031,-18.07031zM15,22c-1.10547,0 -2,0.89453 -2,2c0,1.10547 0.89453,2 2,2c1.10547,0 2,-0.89453 2,-2c0,-1.10547 -0.89453,-2 -2,-2zM25,22c-1.10547,0 -2,0.89453 -2,2c0,1.10547 0.89453,2 2,2c1.10547,0 2,-0.89453 2,-2c0,-1.10547 -0.89453,-2 -2,-2zM35,22c-1.10547,0 -2,0.89453 -2,2c0,1.10547 0.89453,2 2,2c1.10547,0 2,-0.89453 2,-2c0,-1.10547 -0.89453,-2 -2,-2z"></path></g></g></svg>
+</button>
+
+<div class="chat displayNone">
+    <div style="padding: 1em;
+    background: #4a128c;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px 10px 0 0;display: flex;
+    justify-content: space-between;    align-items: center;">
+        <div>  Novo Chat </div>
+        <div style="color: #4a128c;
+        background: white;
+        border-radius: 50%;
+        padding: 0.25em 0.65em;" onclick="fechaChat()"> X </div>
+    </div>
+    <div style="height: 365px;
+    background: #f1f1f1;"> 
+        <div style="    padding: 1em;
+        display: flex;
+        gap: 1em;
+        align-items: center;">
+            <div style="    background: #4a128c;
+            border-radius: 50%;
+            padding: 0.5em 0.6em;
+            color: white;"> BB </div>
+            <div style="background: white;
+            border-radius: 0px 10px 10px 20px;
+            margin-top: 1em;
+            padding: 0.75em 1em;
+            font-size: .8em;width: 60%;"> 
+                <div style="font-size: .85em;
+                font-weight: 600;
+                margin-bottom: 0.5em;"> BuddyBot </div>
+                <div style="    font-size: .9em;
+                color: #565656;"> Olá em que posso ajudar...</div>
+            </div>
+        </div>
+    </div>
+    <div style="color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background: #f1f1f1;
+    align-items: center;
+    gap: 1em;
+    border-radius: 0 0 10px 10px;">
+        <div style="border: 1px solid #4a128c;
+        border-radius: 4px;
+        padding: 0.75em;
+        font-size: .8em;
+        color: #4a128c;
+        width: 77%;"> Digite aqui... </div>
+        <div style="background: #4a128c;
+        border-radius: 50%;
+        padding: 0.65em .75em;font-size: .9em;"> Ok </div>     
+    </div>
+</div>
+    
+</html>
+
+<script>    
+    var contador = 0;
+
+    window.addEventListener('scroll', function() {
+    var dashboard = document.getElementById('dashboard');
+    var dashboardPosition = dashboard.getBoundingClientRect().top;
+    var windowHeight = window.innerHeight;
+
+    if (dashboardPosition < windowHeight && contador === 0) {
+        // função a ser executada quando a div com id='dashboard' estiver visível na janela do navegador
+        executaContador();
+        contador++;
+    }
+    });
+
+    function executaContador(){
+        // Obtenha a referência ao elemento do contador
+        const counterElement = document.getElementById("contador1");
+
+        let count = 0;
+
+        const targetCount = 10000;
+        const duration = 50;
+        const increment = targetCount /  500;
+
+        const interval = setInterval(() => {
+            count += increment;
+            if (count >= targetCount) {
+                clearInterval(interval);
+                count = targetCount;
+            }
+            counterElement.innerHTML = count;
+        }, 10);
+
+
+
+        // Obtenha a referência ao elemento do contador
+        const counterElement2 = document.getElementById("contador2");
+
+        let count2 = 0;
+
+        const targetCount2 = 50000;
+        const duration2 = 10;
+        const increment2 = targetCount2 /  500;
+
+        const interval2 = setInterval(() => {
+            count2 += increment2;
+            if (count2 >= targetCount2) {
+                clearInterval(interval2);
+                count2 = targetCount2;
+            }
+            counterElement2.innerHTML = count2;
+        }, 10);
+
+
+        // Obtenha a referência ao elemento do contador
+        const counterElement3 = document.getElementById("contador3");
+
+        let count3 = 0;
+
+        const targetCount3 = 5000;
+        const duration3 = 10;
+        const increment3 = targetCount3 /  500;
+
+        const interval3 = setInterval(() => {
+            count3 += increment3;
+            if (count3 >= targetCount3) {
+                clearInterval(interval3);
+                count3 = targetCount3;
+            }
+            counterElement3.innerHTML = count3;
+        }, 10);
+    }
+
+    function abreApp(){
+        window.location.href = "./app.html"
+    }
+
+    function fechaChat(){
+        document.getElementsByClassName("chat")[0].classList.add("displayNone");
+        document.getElementsByClassName("botao-flutuante")[0].classList.remove("displayNone");
+    }
+
+    function abreChat(){
+        document.getElementsByClassName("chat")[0].classList.remove("displayNone");
+        document.getElementsByClassName("botao-flutuante")[0].classList.add("displayNone");
+    }
+</script>
